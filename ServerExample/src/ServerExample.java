@@ -14,7 +14,9 @@ public class ServerExample {
     public static void startRegistry() throws RemoteException
     {
         // create registry at Server.
+        System.setProperty("java.rmi.server.hostname","localhost");
         registry =  LocateRegistry.createRegistry(PORT);
+
     }
 
     public static void registerObject(String name, Remote remoteObj)
